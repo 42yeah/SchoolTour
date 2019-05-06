@@ -19,11 +19,13 @@ struct Point {
     float x, y;
     float backRadius;
     sf::String name;
+    Point *prev;
 };
 
 struct Vector {
     Point start;
     Point end;
+    bool selected;
 };
 
 struct Polygon {
@@ -38,7 +40,13 @@ public:
     std::vector<Point> &getPoints();
     std::vector<Vector> &getEdges();
     std::vector<Polygon> &getPolygons();
+    std::vector<Vector *> getNeighboringEdges(Point p);
+    std::vector<Point *> getNeighbors(Point p);
     bool dump(std::string name);
+    bool load(std::string name);
+    bool pathfind(Point *from, Point *to);
+    
+    std::vector<Vector> route;
     
 private:
     std::vector<Point> points;
@@ -47,3 +55,7 @@ private:
 };
 
 #endif /* Runtime_hpp */
+
+// trash code
+// sf::RectangleShape miggityPanel(sf::Vector2f{ static_cast<float>(resolution.x), max(100.0f, resolution.y / 3.0f) });
+// miggityPanel.setPosition(0.0f, resolution.y - resolution.y / 3.0f);

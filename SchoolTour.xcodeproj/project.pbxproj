@@ -14,16 +14,18 @@
 		1891C1BC225C913000EDA079 /* libsfml-system.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1891C1B7225C913000EDA079 /* libsfml-system.2.5.1.dylib */; };
 		1891C1BD225C913000EDA079 /* libsfml-network.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1891C1B8225C913000EDA079 /* libsfml-network.2.5.1.dylib */; };
 		1891C1BE225C913000EDA079 /* libsfml-window.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1891C1B9225C913000EDA079 /* libsfml-window.2.5.1.dylib */; };
+		18DFAEF9227FFD900085FB49 /* MiggityPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18DFAEF7227FFD900085FB49 /* MiggityPanel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1891C1A8225C908A00EDA079 /* CopyFiles */ = {
+		1891C1A8225C908A00EDA079 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -39,6 +41,9 @@
 		1891C1B8225C913000EDA079 /* libsfml-network.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-network.2.5.1.dylib"; path = "../../../../usr/local/Cellar/sfml/2.5.1/lib/libsfml-network.2.5.1.dylib"; sourceTree = "<group>"; };
 		1891C1B9225C913000EDA079 /* libsfml-window.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.5.1.dylib"; path = "../../../../usr/local/Cellar/sfml/2.5.1/lib/libsfml-window.2.5.1.dylib"; sourceTree = "<group>"; };
 		1891C1C1225C941900EDA079 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		18DFAEF7227FFD900085FB49 /* MiggityPanel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MiggityPanel.cpp; sourceTree = "<group>"; };
+		18DFAEF8227FFD900085FB49 /* MiggityPanel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MiggityPanel.hpp; sourceTree = "<group>"; };
+		18DFAEFD22802CC50085FB49 /* 1557145975236 */ = {isa = PBXFileReference; lastKnownFileType = text; path = 1557145975236; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 		1891C1A1225C908A00EDA079 = {
 			isa = PBXGroup;
 			children = (
+				18DFAEFC22802CA10085FB49 /* Maps */,
 				1891C1C1225C941900EDA079 /* Assets */,
 				1891C1AC225C908A00EDA079 /* SchoolTour */,
 				1891C1AB225C908A00EDA079 /* Products */,
@@ -81,6 +87,8 @@
 				1891C1AD225C908A00EDA079 /* main.cpp */,
 				184C48062265D2C3001912B0 /* Runtime.cpp */,
 				184C48072265D2C3001912B0 /* Runtime.hpp */,
+				18DFAEF7227FFD900085FB49 /* MiggityPanel.cpp */,
+				18DFAEF8227FFD900085FB49 /* MiggityPanel.hpp */,
 			);
 			path = SchoolTour;
 			sourceTree = "<group>";
@@ -97,6 +105,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		18DFAEFC22802CA10085FB49 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				18DFAEFD22802CC50085FB49 /* 1557145975236 */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,7 +122,7 @@
 			buildPhases = (
 				1891C1A6225C908A00EDA079 /* Sources */,
 				1891C1A7225C908A00EDA079 /* Frameworks */,
-				1891C1A8225C908A00EDA079 /* CopyFiles */,
+				1891C1A8225C908A00EDA079 /* Copy Files */,
 				1891C1C0225C93B800EDA079 /* ShellScript */,
 			);
 			buildRules = (
@@ -165,7 +181,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -r ${SRCROOT}/Assets ${BUILT_PRODUCTS_DIR}\n";
+			shellScript = "cp -r ${SRCROOT}/Assets ${BUILT_PRODUCTS_DIR}\ncp -r ${SRCROOT}/Maps ${BUILT_PRODUCTS_DIR}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -176,6 +192,7 @@
 			files = (
 				184C48082265D2C3001912B0 /* Runtime.cpp in Sources */,
 				1891C1AE225C908A00EDA079 /* main.cpp in Sources */,
+				18DFAEF9227FFD900085FB49 /* MiggityPanel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
